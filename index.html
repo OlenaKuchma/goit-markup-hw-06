@@ -461,7 +461,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop s-hidden" data-modal>
       <div class="modal ">
         <button class="modal-close" data-modal-close type="button">
           <svg width="8" height="8" class="modal-soc-icon">
@@ -469,8 +469,46 @@
               href="./images/icon/symbol-defs.svg#icon-close-black-18dp"
             ></use></svg>
         </button>
-             
-      </div>
+        <div class="modal-title">
+          <p class="modal-title-text">Leave your contacts and we will call you back</p>
+        </div>
+          
+            <form class="modal-form">
+              <input type="text" 
+              class="modal-input" 
+              placeholder="Enter your name*"
+              name="user-name"
+              required
+              >
+              <input type="tel"
+               class="modal-input" 
+               placeholder="Enter your phone*"
+               name="user-phone"
+               title="+38 (00) 000-00-00"
+               pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+               required
+               >
+              <input type="email" 
+              class="modal-input" 
+              placeholder="Enter your e-mail*"
+              name="user-e-mail"
+              required
+              >
+             <input type="text" 
+              class="modal-input" 
+              placeholder="Enter your comment"
+              name="user-comment"
+              
+              >
+              
+
+             </form>
+             <div class="modal-bottom">
+              <p class="modal-bottom-text">I accept the terms and conditions of the <span class="">Privacy Policy</span ></p>
+             </div>
+             <button class="modal-sent" type="submit">Send</button>
+    
+        </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
