@@ -572,6 +572,9 @@ a[class="header-link header-line link"] {
   width: 40px;
   height: 40px;
 }
+.footer-soc-wrap {
+  margin-right: 96px;
+}
 
 .footer-soc-link {
   width: 100%;
@@ -589,8 +592,54 @@ a[class="header-link header-line link"] {
   background-color: var(--color-green);
 }
 
-.footer-soc-wrap {
+/* footer-modal-wrap */
+.footer-form-wrap {
+  height: 80px;
+  max-width: 453px;
+  background-color: transparent;
+  display: block;
+  }
+.user-input {
+  display: inline-flex;
+  margin-top: 16px;
+  gap: 24px;
 }
+.footer-email-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  outline: transparent;
+  background-color: transparent;
+padding-left: 16px;
+font-weight: 400;
+font-size: 12px;
+line-height: 2.0;
+display: flex;
+align-items: center;
+letter-spacing: 0.04em;
+color: #FFFFFF;}
+
+.footer-btn {
+  width: 165px;
+  height: 40px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  outline: transparent;
+  background-color: transparent;
+}  
+
+
+.footer-label-text {
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #ffffff;
+
+}
+
+
 /* ------------backdrop--------- */
 .backdrop {
   position: fixed;
@@ -631,7 +680,7 @@ a[class="header-link header-line link"] {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-soc-icon {
+.modal-close-icon {
   width: 100%;
   height: 100%;
   background-color: var(--color-cornflower);
@@ -670,7 +719,9 @@ a[class="header-link header-line link"] {
   height: 336px;
   top: 112px;
   left: 24px;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .modal-input {
@@ -678,35 +729,118 @@ a[class="header-link header-line link"] {
   height: 40px;
   border: 1px solid var(--color-navy-blue-modal);
   border-radius: 4px;
-  margin-bottom: 8px;
+  padding-left: 38px;
+  outline: transparent;
+  background-color: transparent;
 }
-.modal-input::placeholder {
-  
-
+.modal-input:focus {
+  border-color: var(--color-iris);
 }
 
+.modal-input:focus + .modal-form-icon {
+  fill: var(--color-iris);
+}
 
-.modal-bottom-text {
+.modal-label-text {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-light-slate);
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+.modal-form-icon {
   position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 106px;
+  border: 1px solid var(--color-navy-blue-modal);
+  border-radius: 4px;
+  outline: transparent;
+  background-color: transparent;
+  resize: none;
+  padding: 8px 16px;
+}
+.modal-textarea:focus {
+  border-color: var(--color-iris);
+}
+
+.modal-textarea::placeholder {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-checkbox {
   width: 360px;
-  height: 24px;
+  position: absolute;
+  display: flex;
   top: 464px;
   left: 24px;
- }
-.modal-bottom-text {
-  color: var(--color-light-slate);
-  font-weight: 400;
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.04em;
-text-align: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+/* checkbox */
+.modal-check {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  background-color: transparent;
+}
+.check-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: red;
+}
+.modal-check:is(:hover, :focus, :active) > .check-icon {
+  background-color: var(--color-ocean);
+  fill: #ffffff;
 }
 
-.modal-sent {
+.modal-checkbox-text {
+  width: 100%;
+  color: var(--color-light-slate);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+/* button */
+
+.modal-sent-btn {
   position: absolute;
   width: 169px;
   height: 56px;
-  top: 504px;
-  left: 24px;
+  bottom: 24px;
+  left: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  color: #ffffff;
+  background-color: var(--color-iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--color-iris);
 }
-
