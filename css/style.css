@@ -611,6 +611,13 @@ a[class="header-link header-line link"] {
   background-color: transparent;
   display: block;
 }
+.footer-label-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
 .user-input {
   display: inline-flex;
   margin-top: 16px;
@@ -624,31 +631,48 @@ a[class="header-link header-line link"] {
   outline: transparent;
   background-color: transparent;
   padding-left: 16px;
+  color: var(--color-white);
+}
+.footer-email-input:focus {
+  border-color: var(--color-iris);
+}
+
+.footer-email-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--color-white);
 }
-
 .footer-btn {
-  width: 165px;
-  height: 40px;
-  border: 1px solid var(--color-white);
-  border-radius: 4px;
-  outline: transparent;
-  background-color: transparent;
+  background-color: var(--color-iris);
+  border: 1px solid var(--color-iris);
+  padding: 8px 24px;
+  color: var(--color-white);
+  fill: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+.footer-btn-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  
 }
 
-.footer-label-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
+.footer-btn:is(:hover, :focus) {
+  background-color: var(--color-ocean);
+  border: 1px solid var(--color-ocean);
+} 
 
 /* ------------backdrop--------- */
 .backdrop {
@@ -689,8 +713,8 @@ a[class="header-link header-line link"] {
   height: 24px;
   background-color: var(--color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -702,22 +726,19 @@ a[class="header-link header-line link"] {
   fill: var(--color-navy-blue);
 }
 
-.modal-close:is(:hover, :focus)  {
+.modal-close:is(:hover, :focus) {
   background-color: var(--color-ocean);
   border: 1px solid var(--color-ocean);
-
 }
 .modal-close:is(:hover, :focus) > .modal-close-icon {
-fill: var(--color-white);
+  fill: var(--color-white);
 }
-
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-
 
 .modal-form {
   position: absolute;
@@ -727,7 +748,6 @@ fill: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 .modal-title {
   width: 100%;
@@ -742,12 +762,11 @@ fill: var(--color-white);
   color: var(--color-navy-blue);
 }
 
-
 .modal-user-input {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;  
+  width: 100%;
 }
 
 .modal-input {
@@ -831,7 +850,6 @@ fill: var(--color-white);
   gap: 8px;
 }
 
-
 .modal-checkbox-text .check-icon-frame {
   width: 16px;
   height: 16px;
@@ -842,23 +860,25 @@ fill: var(--color-white);
   align-items: center;
   justify-content: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+.modal-check:focus + .modal-checkbox-text .check-icon-frame {
+  border: 1px solid var(--color-ocean);
+}
 
 .modal-check:checked + .modal-checkbox-text .check-icon-frame {
   background-color: var(--color-ocean);
   border: 1px solid var(--color-ocean);
   fill: var(--color-white);
-  
 }
 
 .check-privacy {
-  color: var(--color-iris)
+  color: var(--color-iris);
 }
 
 /* button */
-
 
 .modal-sent-btn {
   min-width: 169px;
@@ -870,7 +890,6 @@ fill: var(--color-white);
   border: 4px solid var(--color-iris);
   margin-top: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
 }
 
 .modal-sent-btn:is(:hover, :focus) {
